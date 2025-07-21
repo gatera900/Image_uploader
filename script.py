@@ -7,7 +7,7 @@ UPLOADED_FOLDER = os.path.join(WATCH_FOLDER, "uploaded")
 UPLOAD_URL = "https://projects.benax.rw/f/o/r/e/a/c/h/p/r/o/j/e/c/t/s/4e8d42b606f70fa9d39741a93ed0356c/iot_testing_202501/upload.php"
 CHECK_INTERVAL = 5  # Time in seconds between folder checks
 UPLOAD_DELAY = 30  # Time to wait before uploading a new file
-# Ensure the "uploaded" folder exists
+# Ensure the "uploaded" folder exists  
 os.makedirs(UPLOADED_FOLDER, exist_ok=True)
 def upload_file(file_path):
     """Uploads a file using the curl command."""
@@ -42,7 +42,7 @@ def monitor_folder():
         try:
             # Get a list of all files in the watch folder
             current_files = {
-                os.path.join(WATCH_FOLDER, f)
+                os.path.join(WATCH_FOLDER, f)  
                 for f in os.listdir(WATCH_FOLDER)
                 if os.path.isfile(os.path.join(WATCH_FOLDER, f))
             }
